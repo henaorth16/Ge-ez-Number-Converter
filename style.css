@@ -41,8 +41,9 @@ h1 span{
     display: flex;
     justify-content: center;
     height: 1.6rem;
+   
 }
-#numberInput, #convertButton{
+#numberInput,#geezInput, #convertButton, #convertToEnglishButton{
     /* all: unset; */
     border-radius: 3px;
     background-color: #000000ab;
@@ -53,41 +54,49 @@ h1 span{
     justify-content: center;
     align-items: center;
 }
-#numberInput::placeholder{
+
+#numberInput::placeholder, #geezInput::placeholder{
   color: rgba(70, 70, 70, 0.788);
 }
-#numberInput{
+#numberInput, #geezInput{
     width: 50%;
     text-align: start;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     border: 1px solid #f8f8f8;
+    opacity: .5;
 }
-#numberInput:focus{
+
+#numberInput:focus, #geezInput:focus{
     outline: 2px solid #ffffffa8;
+    opacity: 1;
 
 }
-#convertButton{
+#convertButton, #convertToEnglishButton{
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     background-color: #6b1e09;
     color: rgb(245, 245, 245);
     cursor: pointer;
     border: 1px solid #f8f8f8;
-   
-
+    opacity: .5;
 }
-input[type="number"] {
+
+#numberInput:focus ~ #convertButton, #geezInput:focus ~ #convertToEnglishButton {
+  opacity: 1;
+}
+
+input[type="number"], #geezInput {
     -webkit-appearance: textfield;
        -moz-appearance: textfield;
             appearance: textfield;
   }
-  input[type=number]::-webkit-inner-spin-button, 
-  input[type=number]::-webkit-outer-spin-button { 
+  input::-webkit-inner-spin-button, 
+  input::-webkit-outer-spin-button { 
     -webkit-appearance: none;
   }
 
-  #result{
+  #result, #resultArabic{
     padding: 2.4rem 0;
     font-size: 2.1rem;
     font-family: amharic, "sans-serif";
@@ -113,11 +122,11 @@ input[type="number"] {
     .footer{
         font-size: 12px;
     }
-    #numberInput, #convertButton{
+    #numberInput,#geezInput, #convertButton, #convertToEnglishButton{
         font-size: 1.2rem;
         padding: 1rem 1.3rem;
     }
-    #numberInput{
+    #numberInput, #geezInput{
         width: 100%;
     }
   }
