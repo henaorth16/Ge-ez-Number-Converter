@@ -34,4 +34,4 @@ Contributions are welcome! Please feel free to submit any bug fixes or enhanceme
 
 ## Contact
 
-For any questions or inquiries, feel free to contact the project maintainer at [telegram](https://t.me/henaorth).
+For any questions or inquiries, feel free to contact the project maintainer on [telegram](https://t.me/henaorth).
