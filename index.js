@@ -22,22 +22,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function getValidOutPut() {
     const inputNumber = parseInt(numberInput.value, 10);
-
     if (!isNaN(inputNumber) && inputNumber >= 1 && inputNumber <= 100000000) {
       const geezNumber = convertToGeez(inputNumber);
       result.textContent = `${geezNumber}`;
+      result.style.fontSize = "clamp(1.5rem, 2.5vw, 4rem)"
     } else {
       result.textContent =
         "Please enter a valid number between 1 and 100,000,000.";
+        result.style.fontSize = "1.3rem"
     }
   }
+ 
   function getValidEnglishOutPut() {
     const inputGeez = geezInput.value.trim();
 
     if (inputGeez.length > 0) {
       const arabicNumber = convertToEnglish(inputGeez);
       console.log(arabicNumber);
-      resultArabic.innerText = `English Format: ${arabicNumber}`;
+      resultArabic.innerText = `${arabicNumber}`;
     } else {
       resultArabic.innerText = "Please enter a Geez number.";
     }
@@ -149,7 +151,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
-
 
 const code = 4969;
 
@@ -293,7 +294,10 @@ function geezFourConverter(num) {
   for (let i = 0; i < num.length; i++) {
     chars.push(num[i]);
   }
-  return convertToEnglish(chars[0]) * 100 + geezTwoConverter(`${chars[2]}${chars[3]}`);
+  return (
+    convertToEnglish(chars[0]) * 100 +
+    geezTwoConverter(`${chars[2]}${chars[3]}`)
+  );
 }
 
 function geezFiveConverter(num) {
