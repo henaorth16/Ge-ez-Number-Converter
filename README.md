@@ -1,4 +1,4 @@
-#  using javaScript
+# Ge'ez Number converter using javaScript
 ---
 
 ![Preview image](image.png)
